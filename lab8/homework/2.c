@@ -22,7 +22,7 @@ int main() {
   scanf("%[^\n]s", str);
 
   for(int i=0; i<=strlen(str); i++) {
-    if(str[i] == ' ' || str[i] == '\0') {
+    if(!(tolower(str[i]) >= 97 && tolower(str[i]) <= 122)) {
         words[w][c] = '\0';
         w++;
         c = 0;
