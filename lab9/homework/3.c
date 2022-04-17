@@ -1,5 +1,22 @@
 #include <stdio.h>
 
+void read(int A[], int n);
+void print(int A[], int n);
+void sort(int A[], int n);
+
+int main() {
+    int too[100], n;
+
+    scanf("%d", &n);
+
+    read(too, n);
+    sort(too, n);
+    print(too, n);
+
+
+    return 0;
+}
+
 void read(int A[], int n) {
     for (int i = 0; i < n; i++)
         scanf("%d", &A[i]);
@@ -26,17 +43,3 @@ void sort(int A[], int n) {
         A[j + 1] = temp;
     }
 }
-
-int main() {
-    int too[100], n;
-
-    scanf("%d", &n);
-
-    read(too, n);
-    sort(too, n);
-    print(too, n);
-
-
-    return 0;
-}
-
